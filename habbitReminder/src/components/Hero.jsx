@@ -1,5 +1,7 @@
 import React from "react";
-
+import { BiBookOpen} from 'react-icons/Bi';
+import { SlCalender} from 'react-icons/Sl';
+import { AiOutlineCheck} from 'react-icons/Ai';
 const Hero = () => {
   return (
     <div>
@@ -16,22 +18,33 @@ const Hero = () => {
         </div>
 
         <div className="boxes">
-        <div className="box1">
-          <h2>Review your habits daily See your habits for the day.</h2>
+        <div className="box1 box">
+          <BiBookOpen className="icon"/>
+          <h2>Review your habits daily </h2>
+          <h2 className="lightText">See your habits for the day.</h2>
         </div>
-        <div className="box2">
+        <div className="box2 box">
+          <SlCalender className="icon"/>
           <h2>
-            Beautiful calendar Get a monthly overview of every habit to see how
-            well you have performed.
+            Beautiful calendar 
           </h2>
+          <h2 className="lightText">Get a monthly overview of every habit to see how
+            well you have performed.</h2>
         </div>
-          <div className="box3">
+          <div className="box3 box">
+            <AiOutlineCheck className="icon"/>
             <h2>
-              Many options Repeat daily, weekly and monthly, in intervals or
-              just track whenever you want.
+              Many options 
             </h2>
+            <h2 className="lightText">Repeat daily, weekly and monthly, in intervals or
+              just track whenever you want.</h2>
           </div>
           </div>
+        </div>
+        <div className="details1">
+          <span className="heavyHeading span1">Get started with <br /> Habitory today</span>
+          <span className="lightHeading span2">Habitory keps your habits organized. Start tracking habits today!</span>
+          <button className="button largeButton">Go to App</button>
         </div>
       </div>
     
