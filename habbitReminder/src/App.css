@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1d1c1c;
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+  background-color: #1d1c1c;
+  color: #fff;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+
+  padding: 0.5rem;
+}
+
+li {
+  padding: 2rem;
+}
+.button {
+  text-align: center;
+  background-color: rgb(6, 135, 92);
+  padding: 0.7rem;
+  border-radius: 0.2rem;
+  color: #fff;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  height: 5rem;
+  width: 5rem;
+  margin-right: 5rem;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  
+  font-size: 6rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.details1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+.span1,.span2{
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0.5rem;
+}
+
+.span1{
+  font-weight: 1000;
+}
+
+.span2{
+  font-weight: 100;
+  color: antiquewhite;
+}
+.boxes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  
+}
+.box1,
+.box2,
+.box3 {
+  background-color: #0d0d0d;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0.5rem 0;
+  
+  
+}
+
