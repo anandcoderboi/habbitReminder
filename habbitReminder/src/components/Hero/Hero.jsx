@@ -2,6 +2,7 @@ import React from "react";
 import { BiBookOpen} from 'react-icons/Bi';
 import { SlCalender} from 'react-icons/Sl';
 import { AiOutlineCheck} from 'react-icons/Ai';
+import "./Hero.css"
 const Hero = () => {
   return (
     <div className="hero-div">

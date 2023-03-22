@@ -1,0 +1,32 @@
+.footer {
+    background-color: #1d1c1c;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    height: 5rem;
+    width: 5rem;
+    margin-right: 5rem;
+    opacity: 0.7;
+    border-radius: 50%;
+}
+
+.line {
+    color: white;
+}
+.list {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+
+    padding: 0.5rem;
+}
