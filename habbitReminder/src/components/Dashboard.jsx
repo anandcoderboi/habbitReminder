@@ -1,11 +1,25 @@
-import React from 'react'
+import React from "react";
 
-const Dashboard = () => {
+const Dashboard = ({ show, onClose }) => {
+  if (!show) {
+    return null;
+  }
   return (
-    <div className='dashboard'>
-        <button className='button habitButton'>Add a New Habit</button>
+    <div className="dashboard">
+      <div className="dashboard-content">
+        <div id="dashboard-header">
+          <input className="input-habbit"  maxLength= {50}  type="text" />
+          <label className="label-habbit" for="text">Habbit</label>
+        </div>
+        <div className="dashboard-body">content</div>
+        <div className="dashboard-footer">
+          <button onClick={onClose} className="addhabbit">
+            add habbit
+          </button>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;

@@ -12,7 +12,7 @@ const Navbar = () => {
         <li ><Link to="/about" className="link">About</Link></li>
         <li>blog</li>
         <li>
-          <button className="button"><Link to="/dashboard" className="link">Go to app</Link></button>
+          <button className="button"><Link to="/Modal" className="link">Go to app</Link></button>
         </li>
       </ul>
     </div>

@@ -4,9 +4,9 @@ import { SlCalender} from 'react-icons/Sl';
 import { AiOutlineCheck} from 'react-icons/Ai';
 const Hero = () => {
   return (
-    <div>
-      <h1>"Track your habits,</h1>
-      <h1>achieve your goals."</h1>
+    <div className="hero-div">
+      <h1 className="heading1">"Track your habits,</h1>
+      <h1 className="heading2">achieve your goals."</h1>
 
       <div className="details">
         <div className="details1">

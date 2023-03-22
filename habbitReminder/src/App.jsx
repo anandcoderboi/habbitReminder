@@ -4,7 +4,7 @@ import Home from './components/Home.jsx'
 import About from './components/About.jsx'
 import Navbar from './components/Navbar.jsx'
 import { BrowserRouter as Router ,Route,Routes} from 'react-router-dom';
-import Dashboard from './components/Dashboard'
+import Modal from './components/Modal.jsx'
 function App() {
   
 
@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/Modal" element={<Modal/>} />
         </Routes>
       </Router>
   )
