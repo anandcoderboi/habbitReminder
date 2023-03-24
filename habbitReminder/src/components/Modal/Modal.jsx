@@ -22,7 +22,7 @@ const Modal = () => {
       <button  onClick={openModal} className="addyourhabbit">Add your habbit</button>
       </div>
       <div className='test'>
-      <Dashboard  onClose={closeModal} show={open}/>
+      <Dashboard onClose={closeModal} show={open}/>
       </div>
     </div>
   )
