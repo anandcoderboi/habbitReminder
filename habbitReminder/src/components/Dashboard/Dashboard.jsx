@@ -12,14 +12,45 @@ const Dashboard = ({ show, onClose }) => {
   const [enddate,setendDate] = React.useState(new Date());
   const [startdisplay, setstartdisplay] = React.useState(false);
   const [enddisplay, setenddisplay] = React.useState(false);
+  const [input, setinput] = React.useState("");
+  const [isStartCalendarOpen,setStartCalendarOpen] =React.useState(false)
+  const [isEndCalendarOpen,setEndCalendarOpen] =React.useState(false)
+    React.useEffect(() => {
+    if (isStartCalendarOpen) {
+      document.getElementById("dashboard").style.height = "100rem";
+      document.getElementById("content").style.height = "90rem";
+    }else{
+      document.getElementById("dashboard").style.height = "50rem";
+      document.getElementById("content").style.height = "45rem";
+    }
+    if (isEndCalendarOpen) {
+      document.getElementById("dashboard").style.height = "100rem";
+      document.getElementById("content").style.height = "90rem";
+    }else{
+      document.getElementById("dashboard").style.height = "50rem";
+      document.getElementById("content").style.height = "45rem";
+    }
+  }, [isStartCalendarOpen],[isEndCalendarOpen]);
+    // React.useEffect(() => {
+  //   if (isEndCalendarOpen) {
+  //     document.getElementById("dashboard").style.height = "100rem"
+  //     document.getElementById("content").style.height = "90rem"
+  //   }else{
+  //     document.getElementById("dashboard").style.height = "50rem"
+  //     document.getElementById("content").style.height = "45rem"
+  //   }
+  // }, [isEndCalendarOpen]);
   if (!show) {
     return null;
   }
   function startcalenderModalOpen(){
     setstartdisplay(!startdisplay)
+    setStartCalendarOpen(!isStartCalendarOpen)
   }
   function endcalenderModalOpen(){
     setenddisplay(!enddisplay)
+    setEndCalendarOpen(!isEndCalendarOpen)
+
   }
   function startcalenderModalClose(){
     setstartdisplay(false)
@@ -36,12 +67,21 @@ const endchangeDate = (e) => {
     setendDate(e)
     console.log(e)
   }
+  function inputStore(e){
+    setinput(e.target.value)
+  }
+const checkData = () => {
+
+    console.log(input)
+    console.log(moment(startdate).format('MMMM Do YYYY'))
+    console.log(moment(enddate).format('MMMM Do YYYY'))
+  }
 //Calendar Tag
   return (
-    <div className="dashboard" >
-      <div className="dashboard-content">
+    <div id="dashboard" className="dashboard" >
+      <div id="content" className="dashboard-content">
         <div id="dashboard-header">
-          <input className="input-habbit" placeholder="Title"  maxLength= {50}  type="text" />
+          <input className="input-habbit" onChange={inputStore} placeholder="Title"  maxLength= {50}  type="text" />
           {/* <label className="label-habbit" for="text">Habbit</label> */}
         </div>
         <div className="dashboard-body">
@@ -53,7 +93,7 @@ const endchangeDate = (e) => {
             <div className="setDate">
               {moment(startdate).format('MMMM Do YYYY')}
             </div >
-            {startdisplay ?
+            {startdisplay && isStartCalendarOpen?
             <div  onClick={startcalenderModalClose}>
               <div id="closeModal" onClick={e=>e.stopPropagation() }  >
                 <Calendar onChange={startchangeDate} value={startdate} className="calender"/>
@@ -61,17 +101,17 @@ const endchangeDate = (e) => {
             </div>
             </div>:
             null}
-          </div>
+          </div><br/><br/>
           <div >
             <AiOutlineCalendar className="calenderLogo"/>
             <button  onClick={endcalenderModalOpen} className="startDate">End Date</button>
             <div className="setDate">
               {moment(enddate).format('MMMM Do YYYY')}
             </div >
-            {enddisplay ?
+            {enddisplay && isEndCalendarOpen?
             <div  onClick={endcalenderModalClose}>
               <div id="closeModal" onClick={e=>e.stopPropagation() }  >
-                <Calendar onChange={endchangeDate} value={enddate} className="calender"/>
+                <Calendar classname="calendar" onChange={endchangeDate} value={enddate} className="calender"/>
                 <p>Current selected date is <b>{moment(enddate).format('MMMM Do YYYY')}</b></p>
             </div>
             </div>:
@@ -79,7 +119,7 @@ const endchangeDate = (e) => {
           </div>
         </div>
         <div className="dashboard-footer">
-          <button onClick={onClose} className="addhabbit">
+          <button onClick={checkData} className="button addhabbit">
             add habbit
           </button>
         </div>
