@@ -1,0 +1,130 @@
+.hero-div {
+    background-color: #000000;
+}
+
+.heading1 {
+    margin: 0;
+}
+button {
+    cursor: pointer;
+}
+.button {
+    text-align: center;
+    background-color: rgb(92, 230, 92);
+    box-shadow: -1px -2px 7px .8px #000000;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    color: #fff;
+}
+.heading1,
+.heading2 {
+    color: #fff;
+    text-align: center;
+
+    font-size: 6rem;
+    font-weight: 700;
+
+    justify-content: center;
+
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.details1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.span1,
+.span2 {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0.5rem;
+}
+
+.span1 {
+    font-weight: 1000;
+}
+
+.span2 {
+    font-weight: 100;
+    color: antiquewhite;
+}
+
+.boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 2rem 2rem 0 2rem;
+
+}
+
+.box1,
+.box2,
+.box3 {
+    background-color: #0d0d0d;
+    width: 15rem;
+    height: 15rem;
+    border: 2px solid rgb(86, 86, 86);
+    border-radius: 0.5rem;
+    margin: 1rem 0.5rem 0;
+    color: white;
+    box-shadow: -1px -2px 7px 2px #000000;
+    font-size: small;
+}
+
+.box:hover {
+    border: 2px solid rgb(117, 116, 116);
+}
+
+.box h2 {
+    font-weight: 100;
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+.lightText {
+    color: #717171;
+}
+
+.icon {
+    height: 1.2rem;
+    width: 1.2rem;
+    color: rgb(115, 251, 115);
+    margin: 1rem;
+}
+
+.heavyHeading {
+    font-size: 3rem;
+}
+
+.lightHeading {
+    font-size: 1.3rem;
+    color: #686666;
+}
+
+.largeButton {
+    margin-top: 2rem;
+    text-align: center;
+    background-color: rgb(92, 230, 92);
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    width: 10rem;
+    margin-bottom: 5rem;
+}

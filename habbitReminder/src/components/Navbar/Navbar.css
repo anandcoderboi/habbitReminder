@@ -1,0 +1,18 @@
+.navbar{
+    background-color: #1d1c1c;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li,
+button {
+    cursor: pointer;
+}
+
+
+li {
+    padding: 2rem;
+}
