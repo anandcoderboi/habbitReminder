@@ -1,31 +1,20 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Dashboard from '../Dashboard/Dashboard'
 import "./Modal.css"
 const Modal = () => {
 
-  const[open,setOpen]=React.useState(false)
+  const[showModal,setShowModal] =useState(false)
 
-  const openModal=()=>{
-    setOpen(!open)
-  }
 
-  const closeModal=()=>{
-    setOpen(false)
-  }
-  return (
+
+  return(
     <div className="modal">
-      <div className="modal-content">
-      <div className="modal-heading">
-        <h1 className="heading">Let's add your habbit!!</h1>
-      </div>
-      
-      <button  onClick={openModal} className="addyourhabbit">Add your habbit</button>
-      </div>
-      <div className='test'>
-      <Dashboard onClose={closeModal} show={open}/>
-      </div>
+      <h1 className="modal-title">Habbit Reminder</h1>
+      <button className='button-primary' onClick={()=>setShowModal(true)}>Add Habbit</button>
+
+
+      {showModal && (<Dashboard onClose={()=>setShowModal(false)}/>)}
     </div>
   )
 }
-
 export default Modal

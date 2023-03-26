@@ -1,40 +1,12 @@
-.addyourhabbit {
-    background-color: #6af00b;
-    color: rgb(5, 4, 4);
-    padding: 2rem;
-    border-radius: 0.5rem;
-
-    justify-content: center;
-    align-items: center;
-    width: 60%;
-    height: 30%;
-    box-shadow: 0px -1px 7px 2px #000;
-    margin-left: 8rem;
-    font-size: 2rem;
-}
-
 .modal {
     display: flex;
-
-
-    justify-content: center;
-    align-items: center;
-
-
-    height: 100vh;
-    width: 100vw;
-    background-color: #000;
-}
-
-.modal-content {
-    display: column;
-
-}
-.modal-heading {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #f1e9e9;
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(10, 10, 10, 0.7);
+  }
+  
+  
