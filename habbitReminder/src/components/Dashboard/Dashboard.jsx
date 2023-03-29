@@ -1,22 +1,28 @@
 import React, { useState } from "react";
-import  "./Dashboard.css"
-import HabbitList from "../Habbitlist/HabbitList.jsx"
+import "./Dashboard.css";
+import Habbitlist from "../Habbitlist/Habbitlist.jsx";
+import { Link } from "react-router-dom";
 
-const Dashboard = ({ openModal, closeModal }) => {
+const Dashboard = ({ openModal, closeModal, ontoggleHabbitlist }) => {
   const [startDate, setStartdate] = useState("");
   const [endDate, setEnddate] = useState("");
   const [habbitName, setHabbitName] = useState("");
   const [habbitdetails, setHabbitdetails] = useState("");
-  const[habbits, setHabbits]=useState([])
+  const [habbits, setHabbits] = useState([]);
 
   const onSave = () => {
-    setHabbits([
-      ...habbits,{startDate,endDate,habbitName,habbitdetails}
-    ])
+    setHabbits([...habbits, { startDate, endDate, habbitName, habbitdetails }]);
 
-    console.log(habbits)
+    console.log(habbits);
   };
-
+  function handleClick() {
+    console.log(habbits);
+    return (
+      <button>
+        <Link to="/habbitlist">Habbit List</Link>
+      </button>
+    );
+  }
   return (
     <div className="modal">
       <div className="modal-background" onClick={closeModal}></div>
@@ -24,7 +30,10 @@ const Dashboard = ({ openModal, closeModal }) => {
       <div className="modal-card">
         <header className="model-card-header">
           <label className="label">Habbit Name</label>{" "}
-          <input className="modal-card-title" onChange={(e)=>setHabbitName(e.target.value)} />
+          <input
+            className="modal-card-title"
+            onChange={(e) => setHabbitName(e.target.value)}
+          />
         </header>
         <section className="modal-card-content">
           <div className="field">
@@ -61,9 +70,11 @@ const Dashboard = ({ openModal, closeModal }) => {
             Save
           </button>
           <button className="button-cancel">Cancel</button>
+          {/* <button onClick={handleClick}>Habbit List</button> */}
+          <button onClick={ontoggleHabbitlist}>habbit list</button>
         </footer>
       </div>
-      <HabbitList habbits={habbits}/>
+      <Habbitlist habbits={habbits} />
     </div>
   );
 };
